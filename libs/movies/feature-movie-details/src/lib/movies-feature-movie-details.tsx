@@ -15,7 +15,6 @@ export function MoviesFeatureMovieDetails(
   return (
     <div>
       <h1>Welcome to movie {props.match.params.id}!</h1>
-
     </div>
   );
 }
