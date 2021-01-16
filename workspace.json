@@ -64,15 +64,15 @@
             }
           }
         },
-        "fullstack":{
-          "executor":"@nrwl/workspace:run-commands",
-          "options":{
-            "commands":[
+        "fullstack": {
+          "executor": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
               {
-                "command":"nx run movies:serve"
+                "command": "nx run movies:serve"
               },
               {
-                "command":"nx run api:serve"
+                "command": "nx run api:serve"
               }
             ]
           }
@@ -179,6 +179,31 @@
           ],
           "options": {
             "jestConfig": "apps/api/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "movies-ui": {
+      "root": "libs/movies/ui",
+      "sourceRoot": "libs/movies/ui/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/movies/ui/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/movies/ui"
+          ],
+          "options": {
+            "jestConfig": "libs/movies/ui/jest.config.js",
             "passWithNoTests": true
           }
         }

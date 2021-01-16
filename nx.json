@@ -23,6 +23,7 @@
   "projects": {
     "movies": { "tags": [] },
     "movies-e2e": { "tags": [], "implicitDependencies": ["movies"] },
-    "api": { "tags": [] }
+    "api": { "tags": [] },
+    "movies-ui": { "tags": [] }
   }
 }
