@@ -1,18 +1,15 @@
-/**
- * This is not a production server yet!
- * This is only a minimal backend to get started.
- */
-
 import * as express from 'express';
+import { Request, Response } from 'express';
+
 import { getAllMovies, getMovieById } from './app/data';
 
 const app = express();
 
-app.get('/api/movies', (req, res) => {
+app.get('/api/movies', (req:Request, res:Response) => {
   res.send(getAllMovies());
 });
 
-app.get('/api/movies/:id', (req,res) => {
+app.get('/api/movies/:id', (req:Request,res:Response) => {
   res.send(getMovieById(req.params.id));
 })
 

@@ -1,4 +1,6 @@
-const data = [
+import { Movie } from "@monorepo/types";
+
+const data:Movie[] = [
     {
         "id":"1",
         "title":"The Rock",
