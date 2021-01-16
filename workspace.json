@@ -64,6 +64,19 @@
             }
           }
         },
+        "fullstack":{
+          "executor":"@nrwl/workspace:run-commands",
+          "options":{
+            "commands":[
+              {
+                "command":"nx run movies:serve"
+              },
+              {
+                "command":"nx run api:serve"
+              }
+            ]
+          }
+        },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
