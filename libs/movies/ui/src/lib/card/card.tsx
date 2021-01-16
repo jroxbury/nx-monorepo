@@ -3,9 +3,13 @@ import React from 'react';
 import styles from './card.module.scss';
 import { Movie } from "@monorepo/types";
 
-export function Card(props: Movie) {
+interface MovieProps extends Movie {
+  onClick: () => void;
+}
+
+export function Card(props: MovieProps) {
   return (
-    <div className={styles.card}>
+    <div className={styles.card} onClick={props.onClick}>
       <h1>{props.title}</h1>
       <p>Year: {props.year}</p>
       <p>Length: {props.runtime}</p>
