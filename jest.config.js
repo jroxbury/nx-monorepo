@@ -3,5 +3,6 @@ module.exports = {
     '<rootDir>/apps/movies',
     '<rootDir>/apps/api',
     '<rootDir>/libs/movies/ui',
+    '<rootDir>/libs/types',
   ],
 };
