@@ -25,6 +25,7 @@
     "movies-e2e": { "tags": [], "implicitDependencies": ["movies"] },
     "api": { "tags": [] },
     "movies-ui": { "tags": [] },
-    "types": { "tags": [] }
+    "types": { "tags": [] },
+    "movies-feature-movie-details": { "tags": [] }
   }
 }

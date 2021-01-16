@@ -16,7 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@monorepo/movies/ui": ["libs/movies/ui/src/index.ts"],
-      "@monorepo/types": ["libs/types/src/index.ts"]
+      "@monorepo/types": ["libs/types/src/index.ts"],
+      "@monorepo/movies/feature-movie-details": [
+        "libs/movies/feature-movie-details/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
