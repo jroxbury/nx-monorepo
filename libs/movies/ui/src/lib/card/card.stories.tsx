@@ -16,7 +16,7 @@ export const primary = () => {
     genre:"Action",
     year:"1996",
     runtime:'2hr 5m',
-    image:'/img',
+    image:'/the-rock.jpeg',
     onClick: () => {}
   };
   

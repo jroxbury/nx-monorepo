@@ -8,12 +8,12 @@
     margin:10px;
     box-shadow:10px 10px 10px black;
     transition: all .3s;
-    
-    &:hover {
-        transition: all .3s;
-        cursor: pointer;
-        box-shadow:5px 5px 5px black;
-    }
+}
+
+.card:hover {
+    transition: all .3s;
+    cursor: pointer;
+    box-shadow:5px 5px 5px black;
 }
 
 h1 {
