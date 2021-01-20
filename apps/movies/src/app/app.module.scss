@@ -3,7 +3,6 @@
   min-width: 300px;
   max-width: 600px;
   margin: 50px auto;
-  display:flex;
 }
 
 .app :global(.gutter-left) {
@@ -126,4 +125,10 @@
   height: 16px;
   width: 16px;
   margin-right: 4px;
+}
+
+
+.cardContainer {
+  display:flex;
+  margin-bottom:35px;
 }

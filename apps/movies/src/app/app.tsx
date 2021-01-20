@@ -51,17 +51,21 @@ export function App() {
 
   return (
     <div className={styles.app}>
+      <div className={styles.cardContainer}>
+
       {state.loadingState === 'loading'
             ? 'Loading...'
             : state.loadingState === 'error'
             ? '<div>Error retrieving data</div>'
             : state.data.map((props) => (
               <Card
-                {...props}
-                onClick={() => history.push(`/movie/${props.id}`)}
+              key={props.id}
+              {...props}
+              onClick={() => history.push(`/movie/${props.id}`)}
               />
-            ))}
+              ))}
 
+      </div>
       <Route
         path="/movie/:id"
         component={MoviesFeatureMovieDetails}
