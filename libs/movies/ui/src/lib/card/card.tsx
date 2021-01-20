@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './card.module.scss';
 import { Movie } from "@monorepo/types";
 
-interface MovieProps extends Movie {
+export interface MovieProps extends Movie {
   onClick: () => void;
 }
 

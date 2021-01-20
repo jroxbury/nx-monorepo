@@ -206,6 +206,36 @@
             "jestConfig": "libs/movies/ui/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "storybook": {
+          "executor": "@nrwl/storybook:storybook",
+          "options": {
+            "uiFramework": "@storybook/react",
+            "port": 4400,
+            "config": {
+              "configFolder": "libs/movies/ui/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        },
+        "build-storybook": {
+          "executor": "@nrwl/storybook:build",
+          "options": {
+            "uiFramework": "@storybook/react",
+            "outputPath": "dist/storybook/movies-ui",
+            "config": {
+              "configFolder": "libs/movies/ui/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
         }
       }
     },
@@ -255,6 +285,34 @@
           "options": {
             "jestConfig": "libs/movies/feature-movie-details/jest.config.js",
             "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "movies-ui-e2e": {
+      "root": "apps/movies-ui-e2e",
+      "sourceRoot": "apps/movies-ui-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/movies-ui-e2e/cypress.json",
+            "tsConfig": "apps/movies-ui-e2e/tsconfig.e2e.json",
+            "devServerTarget": "movies-ui:storybook"
+          },
+          "configurations": {
+            "ci": {
+              "devServerTarget": "movies-ui:storybook:ci"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/movies-ui-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }

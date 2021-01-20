@@ -1,9 +1,14 @@
 {
   "npmScope": "monorepo",
-  "affected": { "defaultBase": "master" },
+  "affected": {
+    "defaultBase": "master"
+  },
   "implicitDependencies": {
     "workspace.json": "*",
-    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
@@ -21,11 +26,28 @@
     }
   },
   "projects": {
-    "movies": { "tags": [] },
-    "movies-e2e": { "tags": [], "implicitDependencies": ["movies"] },
-    "api": { "tags": [] },
-    "movies-ui": { "tags": [] },
-    "types": { "tags": [] },
-    "movies-feature-movie-details": { "tags": [] }
+    "movies": {
+      "tags": []
+    },
+    "movies-e2e": {
+      "tags": [],
+      "implicitDependencies": ["movies"]
+    },
+    "api": {
+      "tags": []
+    },
+    "movies-ui": {
+      "tags": []
+    },
+    "types": {
+      "tags": []
+    },
+    "movies-feature-movie-details": {
+      "tags": []
+    },
+    "movies-ui-e2e": {
+      "tags": [],
+      "implicitDependencies": ["movies-ui"]
+    }
   }
 }
