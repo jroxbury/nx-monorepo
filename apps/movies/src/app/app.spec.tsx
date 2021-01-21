@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { findByTestId, render } from '@testing-library/react';
 
 import { BrowserRouter } from 'react-router-dom';
 
@@ -19,15 +19,16 @@ describe('App', () => {
   beforeEach(() => {
     window.fetch = mockFetch([]);
   });
-  
-  it('should render successfully', () => {
+
+  it('should render successfully', async () => {
     const { baseElement } = render(
       <BrowserRouter>
         <App />
       </BrowserRouter>
     );
 
-    expect(baseElement).toBeTruthy();
+    const element = await findByTestId(baseElement, 'app-container');
+    expect(element).toBeTruthy();
   });
 
 });
