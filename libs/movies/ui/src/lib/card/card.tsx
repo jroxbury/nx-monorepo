@@ -11,8 +11,6 @@ export function Card(props: MovieProps) {
   return (
     <div className={styles.card} onClick={props.onClick}>
       <h1>{props.title}</h1>
-      <p>Year: {props.year}</p>
-      <p>Length: {props.runtime}</p>
       <p>Genre: {props.genre}</p>
       <img src={props.image}/>
     </div>

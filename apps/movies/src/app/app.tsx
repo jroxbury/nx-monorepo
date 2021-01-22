@@ -8,14 +8,7 @@ import { MoviesFeatureMovieDetails } from '@monorepo/movies/feature-movie-detail
 import { Movie } from '@monorepo/types';
 
 export function App() {
-  const props = {
-    id: '1',
-    title: 'The Rock',
-    year: '1996',
-    genre: 'Action/Thriller',
-    runtime: '2h 16m',
-    image: '/assets/the-rock.jpeg',
-  };
+  
   const history = useHistory();
 
   const [state, setState] = useState<{

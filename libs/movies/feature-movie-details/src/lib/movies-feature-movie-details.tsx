@@ -21,7 +21,10 @@ export function MoviesFeatureMovieDetails(props: MoviesFeatureMovieDetailsProps)
 
   return (
     <div>
-      <h1>{data?.title}</h1>
+      <h1>Title: {data?.title}</h1>
+      <p>Genre: {data?.genre}</p>
+      <p>Runtime: {data?.runtime}</p>
+      <p>Year: {data?.year}</p>
     </div>
   );
 }
